@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 09:46:53 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/17 09:24:02 by dduarte-         ###   ########.fr       */
+/*   Created: 2023/04/17 11:52:21 by dduarte-          #+#    #+#             */
+/*   Updated: 2023/04/17 12:05:19 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char const	*s, int c)
+int	ft_atoi(const char	*ptr)
 {
+	int	j;
 	int	i;
+	int	a;
 
-	i = ft_strlen(s);
-	while (i > 0)
+	j = 1;
+	i = 0;
+	a = 0;
+	while (ptr[i] == ' ' || (ptr[i] >= 9 && ptr[i] <= 13))
+		i++;
+	if (ptr[i] == '+' || ptr[i] == '-')
 	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		i--;
+		if (ptr[i] == '-')
+			j *= -1;
+		i++;
 	}
-	if (s[i] == (char)c)
-		return ((char *)s + i);
-	return (NULL);
+	while (ptr[i] >= '0' && ptr[i] <= '9')
+	{
+		a = (a * 10) + (ptr[i] - '0');
+		i++;
+	}
+	a *= j;
+	return (a);
 }

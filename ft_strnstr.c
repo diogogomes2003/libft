@@ -3,43 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dduarte- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 10:58:01 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/13 14:25:28 by dduarte-         ###   ########.fr       */
+/*   Updated: 2023/04/17 10:23:28 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "stdio.h"
-#include "string.h"
+//#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *s, const char *find, size_t slen)
 {
-	const char	*lg;
-	const char	*sm;
-	size_t	i;
+	char	c;
+	char	sc;
+	size_t	len;
 
-	if (*to_find == '\0')
-		return ((char *)str);
-	while (*str != '\0' && len > 0)
+	c = *find++;
+	sc = *s++;
+	if (c != '\0')
 	{
-		lg = str;
-		sm = to_find;
-		i = len;
-		while (*sm != '\0' && *lg == *sm && i--)
+		len = strlen(find);
+		while (strncmp(s, find, len) != 0)
 		{
-			lg++;
-			sm++;
+			while (sc != c)
+			{
+				if (slen-- < 1 || sc == '\0')
+					return (NULL);
+			}
+			if (len > slen)
+				return (NULL);
 		}
-		if (*sm == '\0')
-			return ((char *)str);
+		s--;
 	}
-	return (NULL);
+	return ((char *)s);
 }
-
-int main ()
+int main()
 {
-	printf("%s", ft_strnstr("ola amigos","amigos",6));
-	return(0);
+	const char str1[] = "cinco";
+	const char find[] = "nc";
+	size_t n = 5;
+	char *ptr;
+	ptr = ft_strnstr(str1,find,n);
+
+	printf("ft_strnstr : %s\n",ptr);
 }
