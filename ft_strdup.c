@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 10:58:01 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/17 14:58:09 by dduarte-         ###   ########.fr       */
+/*   Created: 2023/04/17 13:25:00 by dduarte-          #+#    #+#             */
+/*   Updated: 2023/04/17 13:29:04 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strdup(char *src)
 {
-	size_t	i;
-	size_t	j;
+	char	*a;
+	int		i;
+	int		size;
 
+	size = 0;
+	while (src[size])
+		++size;
+	a = ((char *) malloc(sizeof(char) * (size + 1)));
+	if (!a)
+		return (NULL);
 	i = 0;
-	if (*little == '\0' || little == NULL)
-		return ((char *)big);
-	while (big[i] != '\0' && i < len)
+	while (src[i])
 	{
-		j = 0;
-		while (little[j] == big[i + j] && i + j < len)
-		{
-			if (little[j + 1] == '\0')
-			{
-				return ((char *)big + i);
-			}
-			j++;
-		}
+		a[i] = src[i];
 		i++;
 	}
-	return (NULL);
+	a[i] = '\0';
+	return (a);
 }

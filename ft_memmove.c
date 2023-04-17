@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 10:58:01 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/17 14:58:09 by dduarte-         ###   ########.fr       */
+/*   Created: 2023/04/17 12:50:13 by dduarte-          #+#    #+#             */
+/*   Updated: 2023/04/17 13:02:11 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	char	*d;
+	char	*s;
 
-	i = 0;
-	if (*little == '\0' || little == NULL)
-		return ((char *)big);
-	while (big[i] != '\0' && i < len)
+	d = (char *)dest;
+	s = (char *)src;
+	if (s < d)
 	{
-		j = 0;
-		while (little[j] == big[i + j] && i + j < len)
+		d = d + n - 1;
+		s = s + n - 1;
+		while (n > 0)
 		{
-			if (little[j + 1] == '\0')
-			{
-				return ((char *)big + i);
-			}
-			j++;
+			*d-- = *s--;
+			n--;
 		}
-		i++;
 	}
-	return (NULL);
+	else
+	{
+		while (n > 0)
+		{
+			*d++ = *s++;
+			n--;
+		}
+	}
+	return (dest);
 }

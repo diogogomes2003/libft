@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 10:58:01 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/17 14:58:09 by dduarte-         ###   ########.fr       */
+/*   Created: 2023/04/17 14:24:16 by dduarte-          #+#    #+#             */
+/*   Updated: 2023/04/17 14:47:57 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	if (*little == '\0' || little == NULL)
-		return ((char *)big);
-	while (big[i] != '\0' && i < len)
+	while (i < n)
 	{
-		j = 0;
-		while (little[j] == big[i + j] && i + j < len)
-		{
-			if (little[j + 1] == '\0')
-			{
-				return ((char *)big + i);
-			}
-			j++;
-		}
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return ((void *)(s + i));
 		i++;
 	}
 	return (NULL);

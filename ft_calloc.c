@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 10:58:01 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/17 14:58:09 by dduarte-         ###   ########.fr       */
+/*   Created: 2023/04/17 15:04:39 by dduarte-          #+#    #+#             */
+/*   Updated: 2023/04/17 15:43:52 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
+	void	*ptr;
 	size_t	i;
-	size_t	j;
 
+	ptr = (char *)malloc (count * size);
+	if (ptr == NULL)
+		return (ptr);
 	i = 0;
-	if (*little == '\0' || little == NULL)
-		return ((char *)big);
-	while (big[i] != '\0' && i < len)
+	while (i < count * size)
 	{
-		j = 0;
-		while (little[j] == big[i + j] && i + j < len)
-		{
-			if (little[j + 1] == '\0')
-			{
-				return ((char *)big + i);
-			}
-			j++;
-		}
+		*(char *)(ptr + i) = 0;
 		i++;
 	}
-	return (NULL);
+	return (ptr);
 }
