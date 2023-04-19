@@ -49,15 +49,15 @@
 * [`ft_putstr_fd`](https://github.com/diogogomes2003/libft/blob/main/ft_putstr_fd.c)		- output string to given file.
 * [`ft_putendl_fd`](https://github.com/diogogomes2003/libft/blob/main/ft_putendl_fd.c)		- output string to given file with newline.
 * [`ft_putnbr_fd`](https://github.com/diogogomes2003/libft/blob/main/ft_putnbr_fd.c)		- output integer to given file.
-* [`ft_itoa`]()					- convert integer to ASCII string. (working)
+* [`ft_itoa`]()					- convert integer to ASCII string. (working on)
 * [`ft_substr`](https://github.com/diogogomes2003/libft/blob/main/ft_substr.c)				- extract substring from string.
 * [`ft_strtrim`](https://github.com/diogogomes2003/libft/blob/main/ft_strtrim.c)			- trim beginning and end of string with the specified characters.
 * [`ft_strjoin`](https://github.com/diogogomes2003/libft/blob/main/ft_strjoin.c)			- concatenate two strings into a new string (with malloc).
-* [`ft_split`]()				- split string, with specified character as delimiter, into an array of strings. 
-* [`ft_striteri`]()				- (working)
+* [`ft_split`]()				- split string, with specified character as delimiter, into an array of strings. (working on)
+* [`ft_striteri`]()				- (working on)
 * [`ft_strmapi`](https://github.com/diogogomes2003/libft/blob/main/ft_strmapi.c)			- create new string from modifying string with specified function.
 
-## Bonus (working)
+## Bonus (working on)
 ### Linked list functions
 
 * [`ft_lstnew`]()				- create new list.
