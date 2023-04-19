@@ -5,10 +5,62 @@
 ``make`` without bonus functions.
 ### Functions from `<ctype.h>` library
 
-* [`ft_isascii`](libft/ft_isascii.c)			- test for ASCII character.
+* [`ft_isascii`](https://github.com/diogogomes2003/libft/blob/main/ft_isascii.c)			- test for ASCII character.
 * [`ft_isalnum`](https://github.com/diogogomes2003/libft/blob/main/ft_isalnum.c)			- alphanumeric character test.
-* [`ft_isalpha`](libft/ft_isalpha.c)			- alphabetic character test.
-* [`ft_isdigit`](libft/ft_isdigit.c)			- decimal-digit character test.
-* [`ft_isprint`](libft/ft_isprint.c)			- printing character test (space character inclusive).
-* [`ft_tolower`](libft/ft_tolower.c)			- upper case to lower case letter conversion.
-* [`ft_toupper`](libft/ft_toupper.c)			- lower case to upper case letter conversion.
+* [`ft_isalpha`](https://github.com/diogogomes2003/libft/blob/main/ft_isalpha.c)			- alphabetic character test.
+* [`ft_isdigit`](https://github.com/diogogomes2003/libft/blob/main/ft_isdigit.c)			- decimal-digit character test.
+* [`ft_isprint`](https://github.com/diogogomes2003/libft/blob/main/ft_isprint.c)			- printing character test (space character inclusive).
+* [`ft_tolower`](https://github.com/diogogomes2003/libft/blob/main/ft_tolower.c)			- upper case to lower case letter conversion.
+* [`ft_toupper`](https://github.com/diogogomes2003/libft/blob/main/ft_toupper.c)			- lower case to upper case letter conversion.
+
+### Functions from `<stdlib.h>` library
+
+* [`ft_atoi`](https://github.com/diogogomes2003/libft/blob/main/ft_atoi.c)		- convert ASCII string to integer.
+* [`ft_calloc`](https://github.com/diogogomes2003/libft/blob/main/ft_calloc.c)	- memory allocation.
+
+### Functions from `<strings.h>` library
+
+* [`ft_bzero`](https://github.com/diogogomes2003/libft/blob/main/ft_bzero.c)		- write zeroes to a byte string.
+* [`ft_memset`](https://github.com/diogogomes2003/libft/blob/main/ft_memset.c)		- write a byte to a byte string.
+* [`ft_memchr`](https://github.com/diogogomes2003/libft/blob/main/ft_memchr.c)		- locate byte in byte string.
+* [`ft_memcmp`](https://github.com/diogogomes2003/libft/blob/main/ft_memcmp.c)		- compare byte string.
+* [`ft_memmove`](https://github.com/diogogomes2003/libft/blob/main/ft_memmove.c)	- copy byte string.
+* [`ft_memcpy`](https://github.com/diogogomes2003/libft/blob/main/ft_memcpy.c)		- copy memory area.
+
+### Functions from `<string.h>` library
+
+* [`ft_strlen`](https://github.com/diogogomes2003/libft/blob/main/ft_strlen.c)				- find length of string.
+* [`ft_strchr`](https://github.com/diogogomes2003/libft/blob/main/ft_strchr.c)				- locate character in string (first occurrence).
+* [`ft_strrchr`](https://github.com/diogogomes2003/libft/blob/main/ft_strrchr.c)			- locate character in string (last occurence).
+* [`ft_strnstr`](https://github.com/diogogomes2003/libft/blob/main/ft_strnstr.c)			- locate a substring in a string (size-bounded).
+* [`ft_strncmp`](https://github.com/diogogomes2003/libft/blob/main/ft_strncmp.c)			- compare strings (size-bounded).
+* [`ft_strdup`](https://github.com/diogogomes2003/libft/blob/main/ft_strdup.c)				- save a copy of a string (with malloc).
+* [`ft_strlcpy`](https://github.com/diogogomes2003/libft/blob/main/ft_strlcpy.c)			- size-bounded string copying.
+* [`ft_strlcat`](https://github.com/diogogomes2003/libft/blob/main/ft_strlcat.c)			- size-bounded string concatenation.
+
+### Non-standard functions
+
+* [`ft_putchar_fd`](https://github.com/diogogomes2003/libft/blob/main/ft_putchar_fd.c)		- output a character to given file.
+* [`ft_putstr_fd`](https://github.com/diogogomes2003/libft/blob/main/ft_putstr_fd.c)		- output string to given file.
+* [`ft_putendl_fd`](https://github.com/diogogomes2003/libft/blob/main/ft_putendl_fd.c)		- output string to given file with newline.
+* [`ft_putnbr_fd`](https://github.com/diogogomes2003/libft/blob/main/ft_putnbr_fd.c)		- output integer to given file.
+* [`ft_itoa`]()					- convert integer to ASCII string. (working)
+* [`ft_substr`](https://github.com/diogogomes2003/libft/blob/main/ft_substr.c)				- extract substring from string.
+* [`ft_strtrim`](https://github.com/diogogomes2003/libft/blob/main/ft_strtrim.c)			- trim beginning and end of string with the specified characters.
+* [`ft_strjoin`](https://github.com/diogogomes2003/libft/blob/main/ft_strjoin.c)			- concatenate two strings into a new string (with malloc).
+* [`ft_split`]()				- split string, with specified character as delimiter, into an array of strings. 
+* [`ft_striteri`]()				- (working)
+* [`ft_strmapi`](https://github.com/diogogomes2003/libft/blob/main/ft_strmapi.c)			- create new string from modifying string with specified function.
+
+## Bonus (working)
+### Linked list functions
+
+* [`ft_lstnew`]()				- create new list.
+* [`ft_lstsize`]()			- count elements of a list.
+* [`ft_lstlast`]()			- find last element of list.
+* [`ft_lstadd_back`]()	- add new element at end of list.
+* [`ft_lstadd_front`]()	- add new element at beginning of list.
+* [`ft_lstdelone`]()		- delete element from list.
+* [`ft_lstclear`]()			- delete sequence of elements of list from a starting point.
+* [`ft_lstiter`]()			- apply function to content of all list's elements.
+* [`ft_lstmap`]()				- apply function to content of all list's elements into new list.
