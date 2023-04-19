@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 13:25:00 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/19 15:07:32 by dduarte-         ###   ########.fr       */
+/*   Created: 2023/04/19 14:20:04 by dduarte-          #+#    #+#             */
+/*   Updated: 2023/04/19 15:12:31 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*a;
 	int		i;
-	int		size;
+	int		j;
+	char	*str;
 
-	size = 0;
-	while (src[size])
-		++size;
-	a = ((char *) malloc(sizeof(char) * (size + 1)));
-	if (!a)
-		return (NULL);
 	i = 0;
-	while (src[i])
-	{
-		a[i] = src[i];
+	j = ft_strlen(s1) - 1;
+	while (i <= j && ft_strchr(set, s1[i]))
 		i++;
-	}
-	a[i] = '\0';
-	return (a);
+	if (i > j)
+		return (ft_strdup(s1 + j + 1));
+	while (j >= 0 && ft_strchr(set, s1[j]))
+		j--;
+	str = malloc(sizeof(char) * (j - i + 2));
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, &s1[i], j - i + 2);
+	return (str);
 }
