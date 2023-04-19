@@ -2,7 +2,12 @@
 
 ## Usage
 
-``make`` without bonus functions.
+``make all`` - run this command to compile all library.
+``make clean`` - run this command to remove all files.o .
+``make fclean`` - run this command to remove all files.o, libft.a and the output test in this case is "teste".
+``make teste`` - run this command to compile the library(libft.a) with the main(main.c).
+``make re`` - this command run the ``fclean``, ``all`` and ``teste`` in this order for "rebuild" all the files.
+
 ### Functions from `<ctype.h>` library
 
 * [`ft_isascii`](https://github.com/diogogomes2003/libft/blob/main/ft_isascii.c)			- test for ASCII character.
