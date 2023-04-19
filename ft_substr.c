@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 12:50:13 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/19 10:31:44 by dduarte-         ###   ########.fr       */
+/*   Created: 2023/04/19 09:00:07 by dduarte-          #+#    #+#             */
+/*   Updated: 2023/04/19 10:35:41 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_substr(char	const *s, unsigned int start, size_t len)
 {
-	char	*d;
-	char	*s;
+	unsigned int	i;
+	unsigned int	j;
+	char			*dest;
 
-	d = (char *)dest;
-	s = (char *)src;
-	if (s < d)
+	i = start;
+	j = 0;
+	dest = (char *)malloc(sizeof(char) * (len + 1));
+	if (dest == NULL)
+		return (NULL);
+	while (j < len && (*(s + i)) != '\0')
 	{
-		d = d + n - 1;
-		s = s + n - 1;
-		while (n > 0)
-		{
-			*d-- = *s--;
-			n--;
-		}
+		*dest = *(s + i);
+		dest++;
+		i++;
+		j++;
 	}
-	else
-	{
-		while (n > 0)
-		{
-			*d++ = *s++;
-			n--;
-		}
-	}
-	return (dest);
+	*dest = '\0';
+	return (dest - len);
 }
