@@ -2,11 +2,11 @@
 
 ## Usage
 
-``make all`` - run this command to compile all library.
-``make clean`` - run this command to remove all files.o .
-``make fclean`` - run this command to remove all files.o, libft.a and the output test in this case is "teste".
-``make teste`` - run this command to compile the library(libft.a) with the main(main.c).
-``make re`` - this command run the ``fclean``, ``all`` and ``teste`` in this order for "rebuild" all the files.
+``make all`` - run this command to compile all library.<br/>
+``make clean`` - run this command to remove all files.o .<br/>
+``make fclean`` - run this command to remove all files.o, libft.a and the output test in this case is "teste".<br/>
+``make teste`` - run this command to compile the library(libft.a) with the main(main.c).<br/>
+``make re`` - this command run the ``fclean``, ``all`` and ``teste`` in this order for "rebuild" all the files.<br/>
 
 ### Functions from `<ctype.h>` library
 
