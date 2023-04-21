@@ -58,7 +58,6 @@
 * [`ft_striteri`](https://github.com/diogogomes2003/libft/blob/main/ft_striteri.c)				- this function changes upper case to lower case and lower case to upper case.
 * [`ft_strmapi`](https://github.com/diogogomes2003/libft/blob/main/ft_strmapi.c)			- create new string from modifying string with specified function.
 
-## Bonus (working on)
 ### Linked list functions
 
 * [`ft_lstnew`](https://github.com/diogogomes2003/libft/blob/main/ft_lstnew.c)				- create new list.
