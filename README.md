@@ -7,6 +7,7 @@
 ``make fclean`` - run this command to remove all files.o, libft.a and the output test in this case is "teste".<br/>
 ``make teste`` - run this command to compile the library(libft.a) with the main(main.c).<br/>
 ``make re`` - this command run the ``fclean``, ``all`` and ``teste`` in this order for "rebuild" all the files.<br/>
+``make bonus`` - this command compile with the bonus part.<br/>
 
 ### Functions from `<ctype.h>` library
 
@@ -60,12 +61,12 @@
 ## Bonus (working on)
 ### Linked list functions
 
-* [`ft_lstnew`]()				- create new list.
-* [`ft_lstsize`]()			- count elements of a list.
-* [`ft_lstlast`]()			- find last element of list.
-* [`ft_lstadd_back`]()	- add new element at end of list.
-* [`ft_lstadd_front`]()	- add new element at beginning of list.
-* [`ft_lstdelone`]()		- delete element from list.
-* [`ft_lstclear`]()			- delete sequence of elements of list from a starting point.
-* [`ft_lstiter`]()			- apply function to content of all list's elements.
-* [`ft_lstmap`]()				- apply function to content of all list's elements into new list.
+* [`ft_lstnew`](https://github.com/diogogomes2003/libft/blob/main/ft_lstnew.c)				- create new list.
+* [`ft_lstsize`](https://github.com/diogogomes2003/libft/blob/main/ft_lstsize.c)			- count elements of a list.
+* [`ft_lstlast`](https://github.com/diogogomes2003/libft/blob/main/ft_lstlast.c)			- find last element of list.
+* [`ft_lstadd_back`](https://github.com/diogogomes2003/libft/blob/main/ft_lstadd_back.c)	- add new element at end of list.
+* [`ft_lstadd_front`](https://github.com/diogogomes2003/libft/blob/main/ft_lstadd_front.c)	- add new element at beginning of list.
+* [`ft_lstdelone`](https://github.com/diogogomes2003/libft/blob/main/ft_lstdelone.c)		- delete element from list.
+* [`ft_lstclear`](https://github.com/diogogomes2003/libft/blob/main/ft_lstclear.c)			- delete sequence of elements of list from a starting point.
+* [`ft_lstiter`](https://github.com/diogogomes2003/libft/blob/main/ft_lstiter.c)			- apply function to content of all list's elements.
+* [`ft_lstmap`](https://github.com/diogogomes2003/libft/blob/main/ft_lstmap.c)				- apply function to content of all list's elements into new list.
