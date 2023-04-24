@@ -6,14 +6,13 @@
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 09:29:47 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/21 12:57:38 by dduarte-         ###   ########.fr       */
+/*   Updated: 2023/04/24 13:16:27 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
