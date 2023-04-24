@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dduarte- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 08:41:51 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/14 11:00:44 by dduarte-         ###   ########.fr       */
+/*   Updated: 2023/04/24 09:14:25 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	srcsize;
 	size_t	i;
 
-	if (!dst || !src)
+	if (!dst && !src && size == 0)
 		return (0);
 	srcsize = ft_strlen(src);
 	i = 0;

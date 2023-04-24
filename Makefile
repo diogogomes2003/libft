@@ -6,7 +6,7 @@
 #    By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 14:30:19 by dduarte-          #+#    #+#              #
-#    Updated: 2023/04/21 12:40:06 by dduarte-         ###   ########.fr        #
+#    Updated: 2023/04/24 08:38:32 by dduarte-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,5 +45,8 @@ re:	fclean all teste
 
 bonus:	${OBJS} ${OBJSB}
 		ar rcs ${NAME} ${OBJSB} ${OBJS} ${HEADER}
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(SRCB)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJSB)
 
 .PHONY: all clean fclean re bonus

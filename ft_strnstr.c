@@ -6,7 +6,7 @@
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 10:58:01 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/17 14:58:09 by dduarte-         ###   ########.fr       */
+/*   Updated: 2023/04/24 11:11:10 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (*little == '\0' || little == NULL)
+	if (little[0] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{

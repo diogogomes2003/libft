@@ -6,7 +6,7 @@
 /*   By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 12:50:13 by dduarte-          #+#    #+#             */
-/*   Updated: 2023/04/19 10:31:44 by dduarte-         ###   ########.fr       */
+/*   Updated: 2023/04/24 10:59:26 by dduarte-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,21 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*d;
 	char	*s;
 
+	if (!dest && !src)
+		return (NULL);
 	d = (char *)dest;
 	s = (char *)src;
-	if (s < d)
+	if (d < s)
 	{
-		d = d + n - 1;
-		s = s + n - 1;
-		while (n > 0)
-		{
-			*d-- = *s--;
-			n--;
-		}
+		while (n--)
+			*d++ = *s++;
 	}
 	else
 	{
-		while (n > 0)
-		{
-			*d++ = *s++;
-			n--;
-		}
+		d += n;
+		s += n;
+		while (n--)
+			*(--d) = *(--s);
 	}
 	return (dest);
 }
