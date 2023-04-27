@@ -6,7 +6,7 @@
 #    By: dduarte- <dduarte-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 14:30:19 by dduarte-          #+#    #+#              #
-#    Updated: 2023/04/24 13:16:06 by dduarte-         ###   ########.fr        #
+#    Updated: 2023/04/27 12:44:56 by dduarte-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,8 @@ clean:
 
 fclean:	clean
 		${RM} ${NAME}
-		${RM} teste
 
-teste:
-	${CC} ${CFLAGS} ${INCLUDE} ${NAME} -o teste
-
-re:	fclean all teste
+re:	fclean all
 
 bonus:	${OBJS} ${OBJSB}
 		ar rcs ${NAME} ${OBJSB} ${OBJS} ${HEADER}
