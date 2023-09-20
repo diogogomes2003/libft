@@ -70,5 +70,4 @@
 * [`ft_lstiter`](https://github.com/diogogomes2003/libft/blob/main/ft_lstiter.c)			- apply function to content of all list's elements.
 * [`ft_lstmap`](https://github.com/diogogomes2003/libft/blob/main/ft_lstmap.c)				- apply function to content of all list's elements into new list.
 
-### Grade
-<img src="https://badge42.vercel.app/api/v2/clhhnbua5001108mbvxboj2i5/project/3061313" alt="dduarte-'s 42 Libft Score" />
+### Grade 125/100
